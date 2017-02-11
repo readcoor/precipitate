@@ -1,0 +1,10 @@
+---
+layout: page
+title: "Articles"
+description: "Here are some articles you may be interested in."
+header-img: "img/about-bg.jpg"
+---
+
+{% for article in site.data.articles %}
+<p>{{ article.authors }} ({{ article.year }}) "{{ article.title }}"  <em>{{ article.journal }}</em>, {{ article.issue }}, {{ article.pp}} [<a href="{{ article.link }}">link</a>]</p>
+{% endfor %}
