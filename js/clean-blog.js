@@ -11,6 +11,8 @@ $(function() {
 
 // Contact Form Scripts
 
+var GOOGLE_URL = 'https://script.google.com/macros/s/AKfycbxt1MKapN-5-xG06ikgd8oR7BKL9AjSvffzpyHmzW9j-hYOLNo/exec';
+
 $(function() {
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
@@ -31,8 +33,9 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: GOOGLE_URL,
                 type: "POST",
+		dataType: 'json',
                 data: {
                     name: name,
                     phone: phone,
@@ -53,7 +56,8 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
+                     error: function(x,y,z) {
+		       console.log('error', x,y,z);
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -63,7 +67,7 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-            })
+	  });
         },
         filter: function() {
             return $(this).is(":visible");
@@ -75,6 +79,7 @@ $(function() {
         $(this).tab("show");
     });
 });
+
 
 
 /*When clicking on Full hide fail/success boxes */
@@ -1009,7 +1014,7 @@ $(document).ready(function() {
 });
 
 // responsive embed videos
-$(document).ready(function () { 
+$(document).ready(function () {
     $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
 	$('iframe[src*="youtube.com"]').addClass('embed-responsive-item');
     $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
