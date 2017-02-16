@@ -39,6 +39,13 @@ a img:hover,
 a img:focus {
   cursor: zoom-in;
 }
+
+.header-credit {
+  float: right;
+  font-size: 60%;
+  margin-top: -50px;
+}
+
 blockquote {
   background-color: #DDD;
   border-radius: 10px;
