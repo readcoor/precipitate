@@ -1,34 +1,50 @@
 ---
 layout: page
 ---
-<p>Notify me when precipitate.bio launches</p>
+<div class="row">
+  <div class="col-xs-6">
+    <h3>Your future home for</h3>
+    <ul class="nodot">
+    <li>News</li>
+    <li>Forums</li>
+    <li>Literature</li>
+    <li>Protocols</li>
+    <li>Job Listings</li>
+    <li>Advice</li>
+    <li>Applications</p>
+    </ul>
+  </div>
+
+  <div class="col-xs-6">
+    <h3>Including</h3>
+    <p>FISSEQ &middot; MERFISH &middot; Seq-FISH &middot; ExM &middot; IHC 
+	&middot; brDNA &middot; MIPs &middot; OligoPaints &middot; DNA Paint 
+	&middot; smFISH &middot; CR &middot; Padlock Probes &middot; Microscopy</p>
+  </div>
+</div>
+
+<h3>Notify me when precipitate.bio launches</h3>
 
 <form name="sentMessage" id="contactForm" novalidate>
-    <div class="row control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-            <label>Email Address</label>
-            <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-            <p class="help-block text-danger"></p>
-        </div>
-    </div>
+  <div class="row control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>Email Address</label>
 
-    <br>
-    <div id="success"></div>
-    <div class="row">
-        <div class="form-group col-xs-12">
-            <button type="submit" class="btn btn-default">Add me to your mailing list</button>
-        </div>
+      <div class="input-group">
+	<input type="email" class="form-control" placeholder="Email Address" id="email"
+	       aria-describedby="basic-addon2"
+               required data-validation-required-message="Please enter your email address.">
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default">Add me to your mailing list
+	    <i id="cog-spinner" class="fa fa-spin fa-cog" aria-hidden="true"></i>
+	  </button>
+	</span>
+      </div>
+      <p class="help-block text-danger"></p>
     </div>
+  </div>
+  <div id="success"></div>
 </form>
 
-<p>Your future home for</p>
-<p>News &middot; Forums &middot; Literature &middot; Protocols &middot; 
-Job Listings &middot; Advice &middot; Applications</p>
 
-<p>Including</p>
-
-<p>FISSEQ &middot; MERFISH &middot; Seq-FISH &middot; ExM &middot; IHC 
-&middot; brDNA &middot; MIPs &middot; OligoPaints &middot; DNA Paint 
-&middot; smFISH &middot; CR &middot; Padlock Probes &middot; Microscopy</p>
-
-
+</div>

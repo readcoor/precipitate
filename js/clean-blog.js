@@ -24,6 +24,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var email = $("input#email").val();
+   	    $('#cog-spinner').css('display', 'inline-block');
 
             $.ajax({
                 url: GOOGLE_URL,
@@ -32,20 +33,21 @@ $(function() {
                 data: { email: email },
                 cache: false,
                 success: function() {
+                    $('#cog-spinner').hide();
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Thanks, we've added you to our list. </strong>");
+                        .append("<strong>Thanks, we've added \"" + email + "\" to our list. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                     error: function(x,y,z) {
-		       console.log('error', x,y,z);
+                     error: function() {
+                    $('#cog-spinner').hide();
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
