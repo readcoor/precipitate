@@ -41,9 +41,11 @@ a img:focus {
 }
 
 .header-credit {
+  font-family: "Open Sans", sans-serif;
   float: right;
   font-size: 60%;
   margin-top: -50px;
+  margin-right: .6em;
 }
 
 blockquote {
