@@ -42,6 +42,9 @@ a img:focus {
 blockquote {
   background-color: #DDD;
   border-radius: 10px;
+  border-left: 0px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
 hr.small {
   max-width: 100px;
