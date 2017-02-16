@@ -40,7 +40,8 @@ a img:focus {
   cursor: zoom-in;
 }
 blockquote {
-  color: #808080;
+  background-color: #DDD;
+  border-radius: 10px;
 }
 hr.small {
   max-width: 100px;
@@ -291,6 +292,19 @@ footer .copyright {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
+}
+
+.promise {
+ font-size: 80%;
+ margin-top: 0px;
+}
+
+.definition {
+  margin-bottom: 0px;
+}
+
+.we-love {
+  margin-bottom: 3em;
 }
 
 #cog-spinner {
