@@ -46,6 +46,11 @@ blockquote {
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
 }
+
+blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+    margin-bottom: 30px;
+}
+
 hr.small {
   max-width: 100px;
   margin: 15px auto;
